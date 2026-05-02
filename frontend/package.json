@@ -10,9 +10,9 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env PORT=8080 react-scripts start",
     "build": "react-scripts build",
-    "serve": "serve -s build -l 3000"
+    "serve": "serve -s build -l 8080"
   },
   "browserslist": {
     "production": [
@@ -27,6 +27,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "serve": "^14.2.6"
   }
 }
