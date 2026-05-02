@@ -1,7 +1,12 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from config import settings
 
-client = AsyncIOMotorClient(settings.MONGO_URL, serverSelectionTimeoutMS=5000)
+client = AsyncIOMotorClient(
+    settings.MONGO_URL,
+    serverSelectionTimeoutMS=5000,
+    tls=True,
+    tlsAllowInvalidCertificates=True,
+)
 db = client[settings.DB_NAME]
 
 # Collections
